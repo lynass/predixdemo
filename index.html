@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+</head>
+<body>
+<img src="image.png" style="width:90%;">
+<meta http-equiv="refresh" content="10000" >
+
+<script type="text/javascript">
+
+var url = 'http://192.35.43.70/image.png'; //url to load image from
+var refreshInterval = 1000; //in ms
+var drawDate = true; //draw date string
+var img;
+
+function init() {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    img = new Image();
+    img.onload = function() {
+        canvas.setAttribute("width", img.width)
+        canvas.setAttribute("height", img.height)
+        context.drawImage(this, 0, 0);
+        if(drawDate) {
+            var now = new Date();
+            var text = now.toLocaleDateString() + " " + now.toLocaleTimeString();
+            var maxWidth = 100;
+            var x = img.width-10-maxWidth;
+            var y = img.height-10;
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.strokeText(text, x, y, maxWidth);
+            context.fillStyle = 'white';
+            context.fillText(text, x, y, maxWidth);
+        }
+    };
+    refresh();
+}
+function refresh()
+{
+    img.src = url + "?t=" + new Date().getTime();
+    setTimeout("refresh()",refreshInterval);
+}
+
+</script>
+<body onload="JavaScript:init();">
+<canvas id="canvas"/>
+</html>
