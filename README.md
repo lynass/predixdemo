@@ -7,5 +7,5 @@ run command: python pir.py to see the motion sensor working on the pi
 
 cd .. back out of the folder and all the way to the root directory
 cd var/www/html 
-this will allow you to see the index.html folder
-sudo nano index.html to see the contents of the index folder.
+this will allow you to see the index2.html folder
+sudo nano index2.html to see the contents of the index folder.
