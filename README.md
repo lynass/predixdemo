@@ -9,3 +9,4 @@ cd .. back out of the folder and all the way to the root directory
 cd var/www/html 
 this will allow you to see the index2.html folder
 sudo nano index2.html to see the contents of the index folder.
+ The MAC address of the raspberry pi is b8:27:eb:0f:5c:d1
