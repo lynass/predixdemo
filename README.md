@@ -9,6 +9,7 @@ cd .. back out of the folder and all the way to the root directory
 cd var/www/html 
 this will allow you to see the index2.html folder
 sudo nano index2.html to see the contents of the index folder.
- The MAC address of the raspberry pi is b8:27:eb:0f:5c:d1 should connect to E.01-DA22
-The Left Onelan NTB is serial no 91809 MAC D6 CB 8A AC AC 72 connected to E.01-DA21 network socket
-The Right Onelan NTB is serial no 91810 MAC xx xx xx xx xx connected to E.01-DA24 network socket
+The MAC address of the raspberry pi is B8:27:EB:0F:5C:D1 should connect to E.01-DA22 rj45 socket
+The Left Onelan NTB is serial no 91809 MAC D8:CB:8A:AC:AC:72 connected to E.01-DA21 rj45 socket
+The Right Onelan NTB is serial no 91810 MAC D8:CB:8A:AC:AE:05 connected to E.01-DA24 rj45 socket
+
